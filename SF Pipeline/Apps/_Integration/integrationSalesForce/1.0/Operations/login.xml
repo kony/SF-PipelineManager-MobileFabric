@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" endpoint="default" groupType="" id="login" passwordencrypted="false" security="authorized_app_user" type="plainxmlserviceConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value=""/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://login.salesforce.com/services/oauth2/token?grant_type=password&amp;client_id=$client_id&amp;client_secret=$client_secret&amp;username=$username&amp;password=$password"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="POST"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value=""/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="identityProvider" value="identitySalesForce"/>
+        <config-param api-version="" appid="" name="identityProviderType" value="Salesforce"/>
+    </service-config>
+    <service-input passthrough="false">
+        <header datatype="" name="" passthrough="false"/>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="username" order="" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="amitabh.pradhan@kony.com" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="password" order="" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="Kony@1234LNl5LfFAjElCYxShJrti0RtU" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="client_id" order="" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="3MVG9Y6d_Btp4xp4gAXiMkH2psil1Xc84BjA9Ipdh.4jMUIP74FqRYgsuj6m67RyNiArr4VLE9uKDxxWuOCJG" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="client_secret" order="" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="2680511173680346128" value="">
+            <accessType></accessType>
+        </param>
+    </service-input>
+    <service-output passthrough="false">
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Authorization" order="" passnull="false" sms-name="" src="concat(//OAuth/token_type,&quot; &quot;,//OAuth/access_token)" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="error" order="" passnull="false" sms-name="" src="//OAuth/error" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="error_description" order="" passnull="false" sms-name="" src="//OAuth/error_description" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+    </service-output>
+</service>

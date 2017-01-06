@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service serviceGroup="" cachable="false" cacheduration="" endpoint="default" groupType="" id="queryAllAccount" passwordencrypted="false" security="authorized_app_user" type="plainxmlserviceConnector" smscode="" smsenabled="false">
+    <service-config>
+        <config-param api-version="" appid="" name="preprocessorname" value=""/>
+        <config-param api-version="" appid="" name="postprocessorname" value=""/>
+        <config-param api-version="" appid="" name="preprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="postprocessorJS" value=""/>
+        <config-param api-version="" appid="" name="endpointUrl" value="https://ap1.salesforce.com/services/data/v38.0/queryAll?q=$queryString"/>
+        <config-param api-version="" appid="" name="ignorehttpproxy" value="true"/>
+        <config-param api-version="" appid="" name="http.method" value="GET"/>
+        <config-param api-version="" appid="" name="dataObjectName" value=""/>
+        <config-param api-version="" appid="" name="sockettimeout" value=""/>
+        <config-param api-version="" appid="" name="responseEncoding" value="UTF-8"/>
+        <config-param api-version="" appid="" name="isembedxmlpresent" value="false"/>
+        <config-param api-version="" appid="" name="retrycount" value="0"/>
+        <config-param api-version="" appid="" name="identityProvider" value="identitySalesForce"/>
+        <config-param api-version="" appid="" name="identityProviderType" value="Salesforce"/>
+    </service-config>
+    <service-input passthrough="false">
+        <header datatype="" name="" passthrough="false">
+            <param datatype="string" defaultvalue="" description="" encode="false" format="None" formatvalue="" name="Authorization" order="" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="" targetdatatype="" testvalue="Bearer 00D90000000nqCK!AQwAQOEBc2p1kDnaQQgjQJLlhKdvrovz47yiLT39MlDGFAyPDcyIwO4mt8wqv3ZkvG6_4hXrzEO0wzPqHokkOIkcwLzf6rVh" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="application/xml" description="" encode="false" format="None" formatvalue="" name="Content-Type" order="" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="" targetdatatype="" testvalue="application/xml" value="application/xml">
+                <accessType></accessType>
+            </param>
+        </header>
+        <param datatype="string" defaultvalue="select Id,Name,Type,ParentId,BillingCity,BillingState,BillingCountry,BillingLatitude,BillingLongitude,BillingAddress,Phone,Fax,AccountNumber,Website,Industry,Ownership,OwnerId,CreatedDate,LastModifiedDate,BillingStreet  from Account" description="" encode="true" format="None" formatvalue="" name="queryString" order="" passnull="false" sms-name="" src="request" sourcevalue="" srcformatvalue="" target="request" targetdatatype="java.lang.String" testvalue="select Id,Name,Type,ParentId,BillingCity,BillingState,BillingCountry,BillingLatitude,BillingLongitude,BillingAddress,Phone,Fax,AccountNumber,Website,Industry,Ownership,OwnerId,CreatedDate,LastModifiedDate,BillingStreet  from Account" value="select Id,Name,Type,ParentId,BillingCity,BillingState,BillingCountry,BillingLatitude,BillingLongitude,BillingAddress,Phone,Fax,AccountNumber,Website,Industry,Ownership,OwnerId,CreatedDate,LastModifiedDate,BillingStreet  from Account">
+            <accessType></accessType>
+        </param>
+    </service-input>
+    <service-output passthrough="false">
+        <dataset id="Account" order="" src="//QueryResult">
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Id" order="" passnull="false" sms-name="" src="records/Id" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Name" order="" passnull="false" sms-name="" src="records/Name" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Type" order="" passnull="false" sms-name="" src="records/Type" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingCity" order="" passnull="false" sms-name="" src="records/BillingCity" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingState" order="" passnull="false" sms-name="" src="records/BillingState" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingCountry" order="" passnull="false" sms-name="" src="records/BillingCountry" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingLatitude" order="" passnull="false" sms-name="" src="records/BillingLatitude" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingLongitude" order="" passnull="false" sms-name="" src="records/BillingLongitude" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingAddress" order="" passnull="false" sms-name="" src="records/BillingAddress" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Phone" order="" passnull="false" sms-name="" src="records/Phone" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Fax" order="" passnull="false" sms-name="" src="records/Fax" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="AccountNumber" order="" passnull="false" sms-name="" src="records/AccountNumber" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Website" order="" passnull="false" sms-name="" src="records/Website" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Industry" order="" passnull="false" sms-name="" src="records/Industry" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="Ownership" order="" passnull="false" sms-name="" src="records/Ownership" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="OwnerId" order="" passnull="false" sms-name="" src="records/OwnerId" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="CreatedDate" order="" passnull="false" sms-name="" src="records/CreatedDate" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="LastModifiedDate" order="" passnull="false" sms-name="" src="records/LastModifiedDate" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+            <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="BillingStreet" order="" passnull="false" sms-name="" src="records/BillingStreet" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+                <accessType></accessType>
+            </param>
+        </dataset>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="message" order="" passnull="false" sms-name="" src="//message" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="errorCode" order="" passnull="false" sms-name="" src="//errorCode" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="queryIdentifier" order="" passnull="false" sms-name="" src="substring-after(//QueryResult/nextRecordsUrl,&quot;/services/data/v38.0/query/&quot;)" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+        <param datatype="string" defaultvalue="" description="" encode="true" format="None" formatvalue="" name="moreRecordsAvailable" order="" passnull="false" sms-name="" src="contains(//QueryResult/done/text(), 'false')" sourcevalue="" srcformatvalue="" target="response" targetdatatype="java.lang.String" testvalue="" value="">
+            <accessType></accessType>
+        </param>
+    </service-output>
+</service>

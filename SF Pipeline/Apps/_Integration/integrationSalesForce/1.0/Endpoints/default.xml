@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<endpoint encryptSecureInfo="false" name="default" type="Salesforce" url="">
+    <apiThrottling/>
+    <config>
+        <entry>
+            <key>identityProviderType</key>
+            <value>Salesforce</value>
+        </entry>
+        <entry>
+            <key>username</key>
+            <value>amitabh.pradhan@kony.com</value>
+        </entry>
+        <entry>
+            <key>ignorehttpproxy</key>
+            <value>true</value>
+        </entry>
+        <entry>
+            <key>identityProvider</key>
+            <value>identitySalesForce</value>
+        </entry>
+        <entry>
+            <key>password</key>
+            <value>Kony@1234LNl5LfFAjElCYxShJrti0RtU</value>
+        </entry>
+    </config>
+</endpoint>
